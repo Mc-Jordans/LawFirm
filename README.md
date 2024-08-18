@@ -21,7 +21,7 @@ This website is automatically deployed via Vercel. Every push to the `main` bran
 
 1. **Clone the Repository**: 
    ```bash
-   git clone https://github.com/your-username/law-firm-website.git
+   git clone https://github.com/Mc-Jordans/law-firm-website.git
    ```
 
 2. **Navigate to the Project Directory**:
@@ -65,7 +65,7 @@ I'm an aspiring multimillionaire with a strong passion for web development. With
 
 ## Contributions
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/your-username/law-firm-website/issues) if you want to contribute.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Mc-Jordans/law-firm-website/issues) if you want to contribute.
 
 ## License
 
@@ -73,4 +73,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries, please feel free to reach out to me via my [GitHub profile](https://github.com/Mc-Jordans).
+For any inquiries, please feel free to reach out to me via my (https://github.com/Mc-Jordans).

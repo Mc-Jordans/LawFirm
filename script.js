@@ -103,14 +103,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Handle form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            
-            // Simulate form submission (replace with actual form submission logic)
-            console.log('Form submitted:', Object.fromEntries(formData));
+   const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        
+        // Send form data using fetch
+        fetch('process_form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Show success message
+            showMessage('Thank you for your message. We will get back to you soon.', 'success');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Show error message
+            showMessage('There was an error submitting your form. Please try again.', 'error');
+        });
+        
+        // Reset form after submission
+        contactForm.reset();
+    });
+}
+
             
             // Show success message
             showMessage('Thank you for your message. We will get back to you soon.', 'success');
@@ -120,19 +140,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to show message
-    function showMessage(message, type) {
-        const messageElement = document.createElement('div');
-        messageElement.textContent = message;
-        messageElement.className = `message ${type}`;
-        if (contactForm) {
-            contactForm.appendChild(messageElement);
+  function showMessage(message, type) {
+    const messageElement = document.createElement('div');
+    messageElement.textContent = message;
+    messageElement.className = `message ${type}`;
+    if (contactForm) {
+        contactForm.appendChild(messageElement);
 
-            // Remove message after 5 seconds
-            setTimeout(() => {
-                messageElement.remove();
-            }, 5000);
-        }
+        // Remove message after 5 seconds
+        setTimeout(() => {
+            messageElement.remove();
+        }, 5000);
     }
+}
+
 
     // Scroll progress bar
     const scrollProgress = document.createElement('div');

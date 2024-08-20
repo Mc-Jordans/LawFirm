@@ -581,22 +581,6 @@ input, textarea, button {
     padding: 0.5rem;
 }
 
-/*Show Message */
-.message {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.message.success {
-    background-color: #d4edda;
-    color: #155724;
-}
-.message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
 /* Read More */
 .read-more{
     color: #1a5f7a;
